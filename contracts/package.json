@@ -1,0 +1,22 @@
+{
+  "name": "hbsc-contracts",
+  "version": "1.0.0",
+  "description": "hchain system contracts",
+  "main": "generate-contracts.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "@truffle/hdwallet-provider": "^1.2.6",
+    "nunjucks": "^3.2.2",
+    "solc": "^0.7.0"
+  },
+  "devDependencies": {
+    "@openzeppelin/test-helpers": "^0.5.9"
+  },
+  "scripts": {
+    "test": "truffle test"
+  },
+  "author": "",
+  "license": "ISC"
+}
