@@ -21,7 +21,7 @@ var punishInstance = new web3.eth.Contract(punish.abi, punishAddress);
 
 const address = ""
 //对提议投票，赞成true, 反对false
-// proposalInstance.methods.voteProposal(address, true).send({ from: address }).then(instance => {
+// proposalInstance.methods.voteProposal("提议id", true).send({ from: address }).then(instance => {
 //     console.log(instance)
 // })
 
@@ -33,4 +33,8 @@ validatorsInstance.methods.stake(address).send({ from: address, value: helpers.e
 });
 
 //取消质押
-validatorsInstance.methods.unstake(address).send({ from: address}).then(console.log);
+// validatorsInstance.methods.unstake(address).send({ from: address}).then(console.log);
+
+// proposalInstance.methods.withdrawProfits(address).send({ from: address }).then(instance => {
+//     console.log(instance)
+// })
