@@ -1,18 +1,8 @@
 pragma solidity >=0.6.0 <0.8.0;
 
 contract Params {
-    bool public initialized ;
+    bool public initialized;
 
-    {% if mock %}
-    address public ValidatorContractAddr;
-    address public PunishContractAddr;
-    address public ProposalAddr;
-    address public PROPOSAL_ADDR;
-
-    // only for test
-    address public miner;
-
-    {% else %}
     // System contracts
     address
         public constant ValidatorContractAddr = 0x000000000000000000000000000000000000f000;
@@ -21,35 +11,19 @@ contract Params {
     address
         public constant ProposalAddr = 0x000000000000000000000000000000000000F002;
 
-    {% endif %}
     // System params
-    uint16 constant public MaxValidators = 32;
+    uint16 public constant MaxValidators = 32;
     // Validator have to wait StakingLockPeriod blocks to withdraw staking
-    uint64 constant public StakingLockPeriod = 100;
+    uint64 public constant StakingLockPeriod = 86400;
     // Validator have to wait WithdrawProfitPeriod blocks to withdraw his profits
-    uint64 constant public WithdrawProfitPeriod = 2;
-    uint256 constant public MinimalStakingCoin = 32 ether;
+    uint64 public constant WithdrawProfitPeriod = 2;
+    uint256 public constant MinimalStakingCoin = 32 ether;
 
-    {% if mock %}
     modifier onlyMiner() {
-        require(
-            // just for test
-            msg.sender == miner,
-            "Miner only"
-        );
+        require(msg.sender == block.coinbase, "Miner only");
         _;
     }
 
-    {% else %}
-    modifier onlyMiner() {
-        require(
-            msg.sender == block.coinbase,
-            "Miner only"
-        );
-        _;
-    }
-
-    {% endif %}
     modifier onlyNotInitialized() {
         require(!initialized, "Already initialized");
         _;
@@ -79,22 +53,7 @@ contract Params {
     }
 
     modifier onlyProposalContract() {
-        require(
-            msg.sender == ProposalAddr,
-            "Proposal contract only"
-        );
+        require(msg.sender == ProposalAddr, "Proposal contract only");
         _;
     }
-
-    {% if mock %}
-    function setContracts(address val, address punish, address proposal) public {
-        ValidatorContractAddr = val;
-        PunishContractAddr = punish;
-        ProposalAddr = proposal;
-    }
-
-    function setMiner(address miner_) public {
-        miner = miner_;
-    }
-    {% endif %}
 }

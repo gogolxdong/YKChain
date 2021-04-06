@@ -611,9 +611,9 @@ func (c *Clique) Seal(chain consensus.ChainHeaderReader, block *types.Block, res
 		return errUnauthorizedSigner
 	}
 	// If we're amongst the recent signers, wait for the next block
-	fmt.Println("snap.Recents:", snap.Recents)
-	fmt.Println("snap.Signers:", snap.Signers)
-	fmt.Println("number:", number)
+	fmt.Println("Clique snap.Recents:", snap.Recents)
+	fmt.Println("Clique snap.Signers:", snap.Signers)
+	fmt.Println("Clique number:", number)
 	for seen, recent := range snap.Recents {
 		if recent == signer {
 			// Signer is among recents, only wait if the current block doesn't shift it out

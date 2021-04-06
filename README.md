@@ -1,7 +1,6 @@
 # 多节点部署
 
 * 数据目录使用/root/.ethereum/，运行时若提示有不兼容区块，检查并清理已有的区块信息，rm -rf /root/.ethereum/; 这也是以太坊的数据目录，注意检查
-多节点部署
 
 1. 创建账号，build/bin/geth account new，输入密码，密码写入password.txt, 生成的地址替换--unlock选项，如下
 
@@ -145,4 +144,4 @@ events.js 事件监听脚本
 
 - 领取出块奖励withdrawStaking
 
-    参数validator为矿工地址，执行签名地址需要与创建时设置的feeAddr一致,领取时间间隔24小时（28800块）
+    参数validator为矿工地址，执行签名地址需要与创建时设置的feeAddr一致

@@ -20,7 +20,7 @@ const punish = JSON.parse(fs.readFileSync("./build/contracts/Punish.json"));
 var punishInstance = new web3.eth.Contract(punish.abi, punishAddress);
 
 //对提议投票，赞成true, 反对false
-proposalInstance.methods.voteProposal("", true).send({ from: '审批人地址' }).then(instance => {
+proposalInstance.methods.voteProposal("提议id", true).send({ from: '审批人地址' }).then(instance => {
     console.log(instance)
 })
 
