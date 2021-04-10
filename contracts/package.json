@@ -8,8 +8,10 @@
   },
   "dependencies": {
     "@truffle/hdwallet-provider": "^1.2.6",
-    "nunjucks": "^3.2.2",
-    "solc": "^0.7.0"
+    "axios": "^0.21.1",
+    "bitcoinjs-lib": "^5.2.0",
+    "nunjucks": "^3.2.3",
+    "solc": "^0.7.6"
   },
   "devDependencies": {
     "@openzeppelin/test-helpers": "^0.5.9"

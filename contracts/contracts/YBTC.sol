@@ -455,9 +455,9 @@ contract CanReclaimToken is Ownable {
 // empty block is used as this contract just inherits others.
 contract OwnableContract is CanReclaimToken, Claimable { } /* solhint-disable-line no-empty-blocks */
 
-// File: contracts/token/WBTC.sol
+// File: contracts/token/YBTC.sol
 
-contract WBTC is StandardToken, DetailedERC20("Wrapped BTC", "WBTC", 8),
+contract YBTC is StandardToken, DetailedERC20("Wrapped BTC", "YBTC", 8),
     MintableToken, BurnableToken, PausableToken, OwnableContract {
 
     function burn(uint value) public onlyOwner {
