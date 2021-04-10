@@ -142,6 +142,6 @@ events.js 事件监听脚本
 
     链程序出块后，自动执行distributeBlockReward将打包所得手续费转到合约进行池分配，代币总量到合约后，合约根据currentValidatorSet中各自地址抵押总额，以及各自占比进行分配记账（validatorInfo[地址].hbIncoming）
 
-- 领取出块奖励withdrawStaking
+- 领取出块奖励withdrawProfits
 
     参数validator为矿工地址，执行签名地址需要与创建时设置的feeAddr一致
