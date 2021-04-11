@@ -8,7 +8,7 @@
 --password password.txt \
 --miner.threads=1 \
 --allow-insecure-unlock \
---bootnodes "enode://0436ed3eb528a94e81cb1718612db80fdfe3164cc1820be2e7e4ab083f354c2392f6b33224f6ef5b0c96a7eeeb52c54f3a8a4a7dd9f3b6e975ad450b5d6c24b4@103.215.3.169:30303" \
+--bootnodes "enode://c1b6e4026bb20c08792c5ce151c247d935fa93b8238653d60036bcad4ff9d4b5a92505ae7856a393aeb3744b248698b1cb7194e1de1179a2d0fd16b862b64ef6@119.8.110.221:30303" \
 --http \
 --http.port 8545 \
 --http.addr 0.0.0.0 \
