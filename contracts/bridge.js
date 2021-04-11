@@ -11,7 +11,6 @@ web3.setProvider(new Web3.providers.WebsocketProvider("ws://127.0.0.1:8546"));
 
 // var bridgeAddress = "0xA929022c9107643515F5c777cE9a910F0D1e490C"; //Heco跨链桥合约地址
 
-
 var bridgeAddress = "0x99bF0aEDa699DFAC56dA4E16d2880466991f66Af"; //跨链桥合约地址
 
 const bridge = JSON.parse(fs.readFileSync("./build/contracts/Bridge.json"));
