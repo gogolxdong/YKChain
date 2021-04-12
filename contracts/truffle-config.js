@@ -29,7 +29,7 @@ const Web3 = require("web3");
  module.exports = {
    networks: {
      development: {
-       provider: () => new Web3.providers.WebsocketProvider('ws://127.0.0.1:8546'),
+       provider: () => new Web3.providers.WebsocketProvider('ws://127.0.0.1:1114'),
       //  provider: () => new HDWalletProvider(mnemonic, 'https://http-mainnet.hecochain.com'),
        network_id: 128
      }

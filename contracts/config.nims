@@ -1,0 +1,5 @@
+--hints:off
+--warnings:off
+--define:ssl
+--define:release
+--gc:orc

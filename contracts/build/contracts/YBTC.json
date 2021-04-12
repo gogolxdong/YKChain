@@ -30347,9 +30347,17 @@
     "name": "solc",
     "version": "0.4.24+commit.e67f0147.Emscripten.clang"
   },
-  "networks": {},
+  "networks": {
+    "128": {
+      "events": {},
+      "links": {},
+      "address": "0xE4284B037F543b03FCf8c478Bc6C19E287C3F3c4",
+      "transactionHash": "0x7d5f5ae91a2f8fea968052a728bb2173891021ea5726c92769c8bcd674bf3804"
+    }
+  },
   "schemaVersion": "3.3.4",
-  "updatedAt": "2021-04-09T05:33:10.762Z",
+  "updatedAt": "2021-04-12T06:36:20.431Z",
+  "networkType": "ethereum",
   "devdoc": {
     "methods": {
       "reclaimToken(address)": {

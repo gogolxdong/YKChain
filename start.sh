@@ -1,18 +1,19 @@
 #!/usr/bin/env bash
 ./build/bin/geth \
 --datadir /root/.ethereum/ \
---port 30303 \
+--port 32760 \
 --mine \
 --nousb \
 --unlock 0xcd0c087aa41fb181bf78d904a0be1af6da42dbff \
 --password password.txt \
---miner.threads=1 \
 --allow-insecure-unlock \
+--miner.threads=1 \
+--syncmode "full" \
 --http \
---http.port 8545 \
+--http.port 1113 \
 --http.addr 0.0.0.0 \
 --ws \
---ws.port 8546 \
+--ws.port 1114 \
 --ws.addr 0.0.0.0 \
---http.api debug,admin,eth,miner,net,personal,txpool,web3,congress \
---ws.api debug,admin,eth,miner,net,personal,txpool,web3,congress
+--http.api debug,admin,eth,miner,net,personal,txpool,web3 \
+--ws.api debug,admin,eth,miner,net,personal,txpool,web3
